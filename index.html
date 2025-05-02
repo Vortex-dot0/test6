@@ -405,8 +405,116 @@
       document.getElementById("userInfo").style.display = "none";
       document.getElementById("loginBtn").style.display = "inline-block";
       document.getElementById("logoutBtn").style.display = "none";
+      alert("logged out successfully!")
     }
+    function openAboutUsModal() {
+  // Create the modal background
+  const modalBackground = document.createElement('div');
+  modalBackground.style.position = 'fixed';
+  modalBackground.style.top = '0';
+  modalBackground.style.left = '0';
+  modalBackground.style.width = '100%';
+  modalBackground.style.height = '100%';
+  modalBackground.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+  modalBackground.style.display = 'flex';
+  modalBackground.style.justifyContent = 'center';
+  modalBackground.style.alignItems = 'center';
+  modalBackground.style.zIndex = '1000';
+
+  // Create the modal content with the About Us text
+  const modalContent = `
+    <div style="background-color: rgba(0, 0, 0, 0.8); color: white; padding: 20px; max-width: 600px; width: 100%; border-radius: 10px; text-align: center;">
+      <button onclick="closeAboutUsModal()" style="position: absolute; top: 10px; right: 10px; background-color: transparent; color: white; border: none; font-size: 20px;">×</button>
+      <h2>About Vortex Media</h2>
+      <p>
+        Vortex Media je napredna streaming platforma koja omogućava autorima da besplatno objavljuju svoje filmove, bez potrebe za posrednicima i distributerima.
+      </p>
+      <p>
+        Naša misija je da pružimo prostor za kreativne filmove, omogućavajući im da dođu do široke publike.
+        Platforma nudi najkvalitetnije i najpopularnije naslove koji će biti redovno dodavani,
+        čineći sadržaj uvek svežim i relevantnim za naše korisnike.
+      </p>
+      <p>
+        O Vortex Media: Vortex Media je srpska filmska produkcija koju su osnovali Marko Jukić i Aleksa Mitrović u aprilu 2025. godine.
+        Naša vizija je da unapredimo filmsku industriju u regionu i pružimo inovativnu i pristupačnu platformu za filmske stvaraoce širom sveta.
+      </p>
+    </div>
+  `;
+
+  // Add the modal content inside the modal background
+  modalBackground.innerHTML = modalContent;
+
+  // Append the modal to the body
+  document.body.appendChild(modalBackground);
+}
+
+// Function to close the modal
+function closeAboutUsModal() {
+  // Find the modal and remove it from the DOM
+  const modal = document.querySelector('div[style*="position: fixed"]');
+  if (modal) {
+    modal.remove();
+  }
+}
+
+// Function open Upload Movie button
+
+
+function openUploadMovieModal() {
+  // Create the modal background
+  const modalBackground = document.createElement('div');
+  modalBackground.style.position = 'fixed';
+  modalBackground.style.top = '0';
+  modalBackground.style.left = '0';
+  modalBackground.style.width = '100%';
+  modalBackground.style.height = '100%';
+  modalBackground.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+  modalBackground.style.display = 'flex';
+  modalBackground.style.justifyContent = 'center';
+  modalBackground.style.alignItems = 'center';
+  modalBackground.style.zIndex = '1000';
+
+  // Create the modal content with the About Us text
+  const modalContent = `
+    <div style="background-color: rgba(0, 0, 0, 0.8); color: white; padding: 20px; max-width: 600px; width: 100%; border-radius: 10px; text-align: center;">
+      <button onclick="closeAboutUsModal()" style="position: absolute; top: 10px; right: 10px; background-color: transparent; color: white; border: none; font-size: 20px;">×</button>
+      <h2>Here's how you can stream your favourite movies</h2>
+      <p>
+        install Vortex Media software and watch movies on our streaming platform
+        <div class="video-link">
+  <h3>Download our app on phone!</h3>
+  <a href="https://www.youtube.com/watch?v=_DCtIv_n1zo&ab_channel=ChodaClips" target="_blank">
+    <button>Watch Video</button>
+  </a>
+</div>
+  </a>
+</div>
+    
+      </p>
+    </div>
+  `;
+
+  // Add the modal content inside the modal background
+  modalBackground.innerHTML = modalContent;
+
+  // Append the modal to the body
+  document.body.appendChild(modalBackground);
+}
+
+// Function to close the modal
+function closeAboutUsModal() {
+  // Find the modal and remove it from the DOM
+  const modal = document.querySelector('div[style*="position: fixed"]');
+  if (modal) {
+    modal.remove();
+  }
+  
+}
+
+
   </script>
+  
+
 
 </body>
 </html>
